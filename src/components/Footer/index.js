@@ -1,7 +1,7 @@
 import React from "react"
 
-function Section() {
+function Footer() {
   return <div>teste</div>
 }
 
-export default Section
+export default Footer
