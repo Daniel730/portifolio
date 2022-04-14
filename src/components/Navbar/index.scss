@@ -1,67 +1,127 @@
-.navbar{
+.navbar {
+  position: fixed;
+  margin: auto 0;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3px 15px;
-  background-image: linear-gradient(to right, #17082e, #241b51);
+  flex-direction: column;
+  justify-content: center;
 
-  .miniature{
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    label{
-      font-size: 15pt;
-      font-weight: bold;
-      color: white;
-    }
-  }
-
-  ul{
-    display: flex;
-    list-style: none;
-    
-    li{
-      margin-left: 50px;
-    }
+  .left-side{
+    height: 100%;
+    width: 60px;
+    position: absolute;
+    background-color: #241b51;
   }
   
-
-  .navLink{
-    text-decoration: none;
-    color: #dcdcdcab;
+  .animated {
+    background-image: linear-gradient(to left, #17082e, #241b51);
     position: relative;
-    font-size: 1rem;
-    font-weight: bolder;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 10px;
+    color: #d2bdff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px;
+    filter: hue-rotate(0deg);
+    border: 2px solid #d2bdff;
+    transition: all 0.1s linear;
 
-    &:hover{
-      color: #cccccc;
-    }
+    &:hover {
+      color: #f1f1f1;
+      border: 1px solid transparent;
+      span {
+        position: absolute;
+        display: block;
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-      height: 1px;
-      bottom: -7px;
-      left: 0;
-      background: -webkit-gradient(linear, right top, left top, from(#6610f2), to(#17161d));
-      background: linear-gradient(270deg, #6610f2 0%, #17161d 100%);
-      -webkit-transform-origin: bottom right;
-      transform-origin: bottom right;
-      -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-      transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-      transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-      transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-  }
+        &:nth-child(1) {
+          filter: hue-rotate(0deg);
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background: linear-gradient(90deg, transparent, #3a86ff);
+          animation: animate1 1s linear infinite;
+        }
+        @keyframes animate1 {
+          0% {
+            left: -100%;
+          }
+          50%,
+          100% {
+            left: 100%;
+          }
+        }
 
-    &:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
+        &:nth-child(2) {
+          filter: hue-rotate(60deg);
+          top: -100%;
+          right: 0;
+          width: 3px;
+          height: 100%;
+          background: linear-gradient(180deg, transparent, #3a86ff);
+          animation: animate2 1s linear infinite;
+          animation-delay: 0.25s;
+        }
+
+        @keyframes animate2 {
+          0% {
+            top: -100%;
+          }
+          50%,
+          100% {
+            top: 100%;
+          }
+        }
+        &:nth-child(3) {
+          filter: hue-rotate(120deg);
+          bottom: 0;
+          right: 0;
+          width: 100%;
+
+          background: linear-gradient(270deg, transparent, #3a86ff);
+          animation: animate3 1s linear infinite;
+          animation-delay: 0.5s;
+        }
+        @keyframes animate3 {
+          0% {
+            right: -100%;
+            height: 3px;
+          }
+          50%,
+          100% {
+            height: 2px;
+            right: 100%;
+          }
+        }
+
+        &:nth-child(4) {
+          filter: hue-rotate(300deg);
+          bottom: -100%;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, #3a86ff);
+          animation: animate4 1s linear infinite;
+          animation-delay: 0.75s;
+        }
+        @keyframes animate4 {
+          0% {
+            bottom: -100%;
+          }
+          50%,
+          100% {
+            bottom: 100%;
+          }
+        }
+      }
     }
   }
 }
