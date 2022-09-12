@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react"
 import { Fade, Bounce } from "react-reveal"
 import Typewriter from "typewriter-effect"
@@ -13,7 +12,7 @@ function About() {
   const typeWriter = (typewriter) => {
     typewriter
       .pauseFor(1000)
-      .typeString("Sou Fron")
+      .typeString("I'm a Fron")
       .pauseFor(200)
       .deleteChars(4)
       .typeString("Back")
@@ -24,12 +23,13 @@ function About() {
       .deleteAll()
       .start()
   }
+
   return (
     <div className="introDiv">
       <div className="intro">
         <Fade top cascade duration={3000}>
           <h1>
-            Olá, meu nome é <br />
+            Hi, my name is <br />
             <strong>Daniel Silva!</strong>
             <br />
             <span>
