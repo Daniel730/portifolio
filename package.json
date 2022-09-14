@@ -12,6 +12,7 @@
     "react-reveal": "^1.2.2",
     "react-scripts": "5.0.0",
     "sass": "^1.50.0",
+    "styled-components": "^5.3.5",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"
   },
@@ -40,8 +41,8 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.11.0",
-    "eslint-config-airbnb": "^19.0.4",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react": "^1.1.7",
     "eslint-config-react-app": "^7.0.1",

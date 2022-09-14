@@ -25,7 +25,7 @@ function About() {
   }
 
   return (
-    <div className="introDiv">
+    <div className="introDiv item" id="home">
       <div className="intro">
         <Fade top cascade duration={3000}>
           <h1>
