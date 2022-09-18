@@ -2,7 +2,7 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -11,23 +11,10 @@ body{
     font-size: 10pt;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background:  linear-gradient(180deg, #17161d 0%, #6610f2 100%); 
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #26065a 0%, #17161d 100%); 
+.item {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(2,0,36);
 }

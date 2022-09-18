@@ -1,19 +1,31 @@
 import React from "react"
 
-import "./index.scss"
-import NavLink from "./NavLink"
+import { Container, Nav, NavLink, Section } from "./style"
 
 function Navbar() {
   return (
-    <div className="navbar" id="navbar">
-      <NavLink href="teste" text="Teste" active />
-      <NavLink href="teste" text="Teste" />
-      <NavLink href="teste" text="Teste" />
-      <NavLink href="teste" text="Teste" />
-      <a href="#hamb" className="icon" onClick={() => myFunction()}>
-        <i className="fa fa-bars" />
-      </a>
-    </div>
+    <Nav id="navbar">
+      <Container>
+        <Section />
+        <Section>
+          <NavLink id="sec-1" href="#home">
+            Home
+          </NavLink>
+
+          <NavLink id="sec-2" href="#about">
+            About Me
+          </NavLink>
+
+          <NavLink id="sec-3" href="#projects">
+            Projects
+          </NavLink>
+
+          <NavLink id="sec-4" href="#contact">
+            Contact
+          </NavLink>
+        </Section>
+      </Container>
+    </Nav>
   )
 }
 
