@@ -1,14 +1,12 @@
 import React from "react"
 
-import { Container, Nav, NavLink, Section, Text } from "./style"
+import { Container, Nav, NavLink, Section } from "./style"
 
 function Navbar() {
   return (
     <Nav id="navbar">
       <Container>
-        <Section>
-          <Text> &lt; D / S &gt; </Text>
-        </Section>
+        <Section />
         <Section>
           <NavLink id="sec-1" href="#home">
             Home

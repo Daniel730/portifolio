@@ -1,13 +1,14 @@
 import styled from "styled-components"
 
-import { primary, purple } from "../../assets/styles/colors"
+import { background, purple } from "../../assets/styles/colors"
 
 export const Nav = styled.nav`
+  padding: 3vh 0;
   z-index: 99;
   top: 0%;
   width: 100%;
   position: fixed;
-  background-color: ${primary};
+  background-color: ${background};
 `
 
 export const Container = styled.div`
@@ -35,6 +36,7 @@ export const NavLink = styled.a`
   padding: 10px;
   color: #fff;
   font-size: 1.2em;
+  font-weight: bolder;
   text-decoration: none;
   transition: all 0.3s ease-out;
 

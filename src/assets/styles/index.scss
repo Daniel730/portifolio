@@ -2,6 +2,7 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -11,9 +12,9 @@ body{
 }
 
 .item {
-  width: 100%;
   height: 100vh;
-  text-align: center;
-  background-color: #ecf0f1;
-  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(2,0,36);
 }
