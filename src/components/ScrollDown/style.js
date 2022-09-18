@@ -1,31 +1,7 @@
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
+import { move, pulse } from "../../assets/styles/animations"
 import { textColor } from "../../assets/styles/colors"
-
-export const pulse = keyframes`
- to {
-    opacity: 1;
-  }
-`
-
-export const move = keyframes`
-  25% {
-    opacity: 1;
- 
-  }
-  33% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-  67% {
-    opacity: 1;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-  }
-`
 
 export const ArrowContainer = styled.div`
   position: absolute;
@@ -84,6 +60,6 @@ export const Text = styled.span`
   color: ${textColor};
   text-transform: uppercase;
   white-space: nowrap;
-  opacity: 0.25;
-  animation: ${pulse} 2s linear alternate infinite;
+  opacity: 0.5;
+  animation: ${pulse} 1s linear alternate infinite;
 `

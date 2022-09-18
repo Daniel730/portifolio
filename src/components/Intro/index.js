@@ -1,12 +1,12 @@
 import React from "react"
-import { Fade, Bounce } from "react-reveal"
+import { Fade } from "react-reveal"
 import Typewriter from "typewriter-effect"
 
 import "./index.scss"
 import github from "../../assets/imgs/github.png"
 import instagram from "../../assets/imgs/instagram.png"
 import linkedin from "../../assets/imgs/linkedin.png"
-import logo from "../../assets/imgs/logo.png"
+import LogoBounce from "../LogoBounce"
 import ScrollDown from "../ScrollDown"
 
 function Intro() {
@@ -75,13 +75,7 @@ function Intro() {
             </li>
           </ul>
         </div>
-        <Bounce>
-          <div className="animation">
-            <div className="box">
-              <img src={logo} alt="logo" />
-            </div>
-          </div>
-        </Bounce>
+        <LogoBounce />
       </div>
       <ScrollDown text="See more about me" to="#about" />
     </>
