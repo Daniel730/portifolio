@@ -9,7 +9,7 @@ import linkedin from "../../assets/imgs/linkedin.png"
 import logo from "../../assets/imgs/logo.png"
 import ScrollDown from "../ScrollDown"
 
-function About() {
+function Intro() {
   const typeWriter = (typewriter) => {
     typewriter
       .pauseFor(1000)
@@ -88,4 +88,4 @@ function About() {
   )
 }
 
-export default About
+export default Intro

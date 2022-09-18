@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components"
-import { background, textColor } from "../../assets/styles/colors"
+
+import { textColor } from "../../assets/styles/colors"
 
 export const pulse = keyframes`
  to {
