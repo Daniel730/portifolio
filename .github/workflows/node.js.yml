@@ -1,25 +1,26 @@
-name: React app deployement
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ master ]
+    branches: [ "master" ]
 
 jobs:
-  eslint:
-    name: run linter
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: Adzz/jest_test_action@v1.0.0
-        with:
-          command: eslint
-  tests:
-    name: run tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: Adzz/jest_test_action@v1.0.0
-        with:
-          command: test:ci
+    - uses: actions/setup-node@v2
+    
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
+    - run: npm ci
+    - run: npm run build --if-present --passWithNoTests
+    - run: npm test
